@@ -110,7 +110,7 @@ NotePad1/
 
 <img width="507" height="1143" alt="image-20251207140721984" src="https://github.com/user-attachments/assets/9dd64236-f124-45be-818f-6b3b8ae55c2b" />
 
-<img width="519" height="1059" alt="image-20251207141531612" src="https://github.com/user-attachments/assets/f76a8591-c47d-4ba9-9c1e-e343cd2611f6" />
+
 
 <img width="518" height="1146" alt="image-20251207141602021" src="https://github.com/user-attachments/assets/4170082c-99e8-486a-9461-c400bf31a5bb" />
 
