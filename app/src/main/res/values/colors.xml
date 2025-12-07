@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 主题颜色 -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#0D47A1</color>
+    <color name="accent">#FF4081</color>
+
+    <!-- 笔记相关颜色 -->
+    <color name="note_bg">#FFFFFF</color>
+    <color name="note_text">#333333</color>
+    <color name="note_line">#E0E0E0</color>
+    <color name="completed_todo">#AAAAAA</color>
+
+    <!-- 列表相关颜色 -->
+    <color name="list_divider">#EEEEEE</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_light">#F0F0F0</color>
 </resources>

@@ -20,135 +20,240 @@ import android.net.Uri;
 import android.provider.BaseColumns;
 
 /**
- * Defines a contract between the Note Pad content provider and its clients. A contract defines the
- * information that a client needs to access the provider as one or more data tables. A contract
- * is a public, non-extendable (final) class that contains constants defining column names and
- * URIs. A well-written client depends only on the constants in the contract.
+ * Defines a contract between the Note Pad content provider and its clients.
+ * 包含笔记（Notes）和待办事项（Todos）的数据结构定义
  */
 public final class NotePad {
     public static final String AUTHORITY = "com.google.provider.NotePad";
 
-    // This class cannot be instantiated
+    // 禁止实例化此类
     private NotePad() {
     }
 
     /**
-     * Notes table contract
+     * 笔记表数据结构定义
      */
     public static final class Notes implements BaseColumns {
 
-        // This class cannot be instantiated
+        // 禁止实例化此类
         private Notes() {}
 
         /**
-         * The table name offered by this provider
+         * 表名
          */
         public static final String TABLE_NAME = "notes";
 
         /*
-         * URI definitions
+         * URI 定义
          */
 
         /**
-         * The scheme part for this provider's URI
+         * URI 协议部分
          */
         private static final String SCHEME = "content://";
 
         /**
-         * Path parts for the URIs
+         * URI 路径部分
          */
 
         /**
-         * Path part for the Notes URI
+         * 笔记列表的路径
          */
         private static final String PATH_NOTES = "/notes";
 
         /**
-         * Path part for the Note ID URI
+         * 单个笔记的路径（包含ID）
          */
         private static final String PATH_NOTE_ID = "/notes/";
 
         /**
-         * 0-relative position of a note ID segment in the path part of a note ID URI
+         * 笔记ID在URI路径中的位置（0为起始索引）
          */
         public static final int NOTE_ID_PATH_POSITION = 1;
 
         /**
-         * Path part for the Live Folder URI
+         * 实时文件夹的路径
          */
         private static final String PATH_LIVE_FOLDER = "/live_folders/notes";
 
         /**
-         * The content:// style URL for this table
+         * 笔记列表的完整URI
          */
         public static final Uri CONTENT_URI =  Uri.parse(SCHEME + AUTHORITY + PATH_NOTES);
 
         /**
-         * The content URI base for a single note. Callers must
-         * append a numeric note id to this Uri to retrieve a note
+         * 单个笔记的基础URI（需要追加ID）
          */
         public static final Uri CONTENT_ID_URI_BASE
-            = Uri.parse(SCHEME + AUTHORITY + PATH_NOTE_ID);
+                = Uri.parse(SCHEME + AUTHORITY + PATH_NOTE_ID);
 
         /**
-         * The content URI match pattern for a single note, specified by its ID. Use this to match
-         * incoming URIs or to construct an Intent.
+         * 单个笔记的URI模式（用于匹配和构建Intent）
          */
         public static final Uri CONTENT_ID_URI_PATTERN
-            = Uri.parse(SCHEME + AUTHORITY + PATH_NOTE_ID + "/#");
+                = Uri.parse(SCHEME + AUTHORITY + PATH_NOTE_ID + "/#");
 
         /**
-         * The content Uri pattern for a notes listing for live folders
+         * 实时文件夹的URI
          */
         public static final Uri LIVE_FOLDER_URI
-            = Uri.parse(SCHEME + AUTHORITY + PATH_LIVE_FOLDER);
+                = Uri.parse(SCHEME + AUTHORITY + PATH_LIVE_FOLDER);
 
         /*
-         * MIME type definitions
+         * MIME类型定义
          */
 
         /**
-         * The MIME type of {@link #CONTENT_URI} providing a directory of notes.
+         * 笔记列表的MIME类型
          */
         public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.google.note";
 
         /**
-         * The MIME type of a {@link #CONTENT_URI} sub-directory of a single
-         * note.
+         * 单个笔记的MIME类型
          */
         public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.google.note";
 
         /**
-         * The default sort order for this table
+         * 默认排序方式（按修改时间降序）
          */
         public static final String DEFAULT_SORT_ORDER = "modified DESC";
 
         /*
-         * Column definitions
+         * 列定义
          */
 
         /**
-         * Column name for the title of the note
-         * <P>Type: TEXT</P>
+         * 笔记标题列
+         * <P>类型: TEXT</P>
          */
         public static final String COLUMN_NAME_TITLE = "title";
 
         /**
-         * Column name of the note content
-         * <P>Type: TEXT</P>
+         * 笔记内容列
+         * <P>类型: TEXT</P>
          */
         public static final String COLUMN_NAME_NOTE = "note";
 
         /**
-         * Column name for the creation timestamp
-         * <P>Type: INTEGER (long from System.curentTimeMillis())</P>
+         * 创建时间列
+         * <P>类型: INTEGER (从System.currentTimeMillis()获取的长整数)</P>
          */
         public static final String COLUMN_NAME_CREATE_DATE = "created";
 
         /**
-         * Column name for the modification timestamp
-         * <P>Type: INTEGER (long from System.curentTimeMillis())</P>
+         * 修改时间列
+         * <P>类型: INTEGER (从System.currentTimeMillis()获取的长整数)</P>
          */
         public static final String COLUMN_NAME_MODIFICATION_DATE = "modified";
+    }
+
+    /**
+     * 新增：待办事项表数据结构定义
+     */
+    public static final class Todos implements BaseColumns {
+
+        // 禁止实例化此类
+        private Todos() {}
+
+        /**
+         * 表名
+         */
+        public static final String TABLE_NAME = "todos";
+
+        /*
+         * URI 定义
+         */
+
+        /**
+         * URI 协议部分（复用笔记的协议）
+         */
+        private static final String SCHEME = "content://";
+
+        /**
+         * 待办事项的路径部分
+         */
+
+        /**
+         * 待办事项列表的路径
+         */
+        private static final String PATH_TODOS = "/todos";
+
+        /**
+         * 单个待办事项的路径（包含ID）
+         */
+        private static final String PATH_TODO_ID = "/todos/";
+
+        /**
+         * 待办事项ID在URI路径中的位置（0为起始索引）
+         */
+        public static final int TODO_ID_PATH_POSITION = 1;
+
+        /**
+         * 待办事项列表的完整URI
+         */
+        public static final Uri CONTENT_URI = Uri.parse(SCHEME + AUTHORITY + PATH_TODOS);
+
+        /**
+         * 单个待办事项的基础URI（需要追加ID）
+         */
+        public static final Uri CONTENT_ID_URI_BASE = Uri.parse(SCHEME + AUTHORITY + PATH_TODO_ID);
+
+        /**
+         * 单个待办事项的URI模式
+         */
+        public static final Uri CONTENT_ID_URI_PATTERN = Uri.parse(SCHEME + AUTHORITY + PATH_TODO_ID + "/#");
+
+        /*
+         * MIME类型定义
+         */
+
+        /**
+         * 待办事项列表的MIME类型
+         */
+        public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.google.todo";
+
+        /**
+         * 单个待办事项的MIME类型
+         */
+        public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.google.todo";
+
+        /**
+         * 默认排序方式（按创建时间降序）
+         */
+        public static final String DEFAULT_SORT_ORDER = "created DESC";
+
+        /*
+         * 列定义
+         */
+
+        /**
+         * 待办事项标题列
+         * <P>类型: TEXT</P>
+         */
+        public static final String COLUMN_NAME_TITLE = "title";
+
+        /**
+         * 待办事项内容列
+         * <P>类型: TEXT</P>
+         */
+        public static final String COLUMN_NAME_CONTENT = "content";
+
+        /**
+         * 完成状态列（0=未完成，1=已完成）
+         * <P>类型: INTEGER</P>
+         */
+        public static final String COLUMN_NAME_COMPLETED = "completed";
+
+        /**
+         * 创建时间列
+         * <P>类型: INTEGER (从System.currentTimeMillis()获取的长整数)</P>
+         */
+        public static final String COLUMN_NAME_CREATE_DATE = "created";
+
+        /**
+         * 截止时间列
+         * <P>类型: INTEGER (从System.currentTimeMillis()获取的长整数)</P>
+         */
+        public static final String COLUMN_NAME_DUE_DATE = "due_date";
     }
 }

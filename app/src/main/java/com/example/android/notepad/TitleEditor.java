@@ -24,20 +24,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-/**
- * This Activity allows the user to edit a note's title. It displays a floating window
- * containing an EditText.
- *
- * NOTE: Notice that the provider operations in this Activity are taking place on the UI thread.
- * This is not a good practice. It is only done here to make the code more readable. A real
- * application should use the {@link android.content.AsyncQueryHandler}
- * or {@link android.os.AsyncTask} object to perform operations asynchronously on a separate thread.
- */
+
 public class TitleEditor extends Activity {
 
-    /**
-     * This is a special intent action that means "edit the title of a note".
-     */
+
     public static final String EDIT_TITLE_ACTION = "com.android.notepad.action.EDIT_TITLE";
 
     // Creates a projection that returns the note ID and the note contents.

@@ -40,4 +40,7 @@
     <string name="error_title">Error</string>
     <string name="error_message">Error loading note</string>
     <string name="nothing_to_save">There is nothing to save</string>
+    <!-- 待办事项相关字符串 -->
+    <string name="todo_list_title">待办事项列表</string>
+    <string name="todo_editor_title">编辑待办事项</string>
 </resources>

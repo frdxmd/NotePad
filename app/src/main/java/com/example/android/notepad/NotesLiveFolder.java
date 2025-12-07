@@ -24,22 +24,10 @@ import android.content.Intent.ShortcutIconResource;
 import android.os.Bundle;
 import android.provider.LiveFolders;
 
-/**
- * This Activity creates a live folder Intent and
- * sends it back to HOME. From the data in the Intent, HOME creates a live folder and displays
- * its icon in the Home view.
- * When the user clicks the icon, Home uses the data it got from the Intent to retrieve information
- * from a content provider and display it in a View.
- *
- * The intent filter for this Activity is set to ACTION_CREATE_LIVE_FOLDER, which
- * HOME sends in response to a long press and selection of Live Folder.
- */
+
 public class NotesLiveFolder extends Activity {
 
-    /**
-     * All of the work is done in onCreate(). The Activity doesn't actually display a UI.
-     * Instead, it sets up an Intent and returns it to its caller (the HOME activity).
-     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

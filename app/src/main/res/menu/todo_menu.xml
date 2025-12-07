@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/menu_add_todo"
+        android:title="添加待办"
+        android:icon="@android:drawable/ic_menu_add"/> <!-- 使用系统内置添加图标 -->
+    <item
+        android:id="@+id/menu_clear_completed"
+        android:title="清除已完成"
+        android:icon="@android:drawable/ic_menu_delete"/> <!-- 使用系统内置删除图标 -->
 </menu>

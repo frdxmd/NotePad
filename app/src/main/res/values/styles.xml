@@ -1,3 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 恢复为原项目兼容的基础主题，保留必要的颜色定义 -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- 仅保留必要的颜色配置，不修改ActionBar相关属性 -->
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+
+    <!-- 笔记编辑页面样式 -->
+    <style name="NoteEditorStyle">
+        <item name="android:background">@color/note_bg</item>
+    </style>
+
+    <!-- 列表项样式 -->
+    <style name="ListitemStyle">
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/list_item_selector</item>
+    </style>
 </resources>

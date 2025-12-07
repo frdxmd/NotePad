@@ -40,17 +40,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-/**
- * This Activity handles "editing" a note, where editing is responding to
- * {@link Intent#ACTION_VIEW} (request to view data), edit a note
- * {@link Intent#ACTION_EDIT}, create a note {@link Intent#ACTION_INSERT}, or
- * create a new note from the current contents of the clipboard {@link Intent#ACTION_PASTE}.
- *
- * NOTE: Notice that the provider operations in this Activity are taking place on the UI thread.
- * This is not a good practice. It is only done here to make the code more readable. A real
- * application should use the {@link android.content.AsyncQueryHandler}
- * or {@link android.os.AsyncTask} object to perform operations asynchronously on a separate thread.
- */
+
 public class NoteEditor extends Activity {
     // For logging and debugging purposes
     private static final String TAG = "NoteEditor";
@@ -95,7 +85,7 @@ public class NoteEditor extends Activity {
             mRect = new Rect();
             mPaint = new Paint();
             mPaint.setStyle(Paint.Style.STROKE);
-            mPaint.setColor(0x800000FF);
+            mPaint.setColor(getResources().getColor(R.color.note_line));
         }
 
         /**
