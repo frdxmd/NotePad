@@ -108,6 +108,8 @@ NotePad1/
 6. 笔记创建记录当前时间
 
 ![image-20251207141531612](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141531612.png)
+<img width="507" height="1143" alt="image-20251207140721984" src="https://github.com/user-attachments/assets/9dd64236-f124-45be-818f-6b3b8ae55c2b" />
+
 
 ![image-20251207141602021](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141602021.png)
 
