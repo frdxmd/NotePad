@@ -107,15 +107,15 @@ NotePad1/
 5. 笔记本还有搜索检索笔记功能
 6. 笔记创建记录当前时间
 
-![image-20251207141531612](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141531612.png)
+
 <img width="507" height="1143" alt="image-20251207140721984" src="https://github.com/user-attachments/assets/9dd64236-f124-45be-818f-6b3b8ae55c2b" />
 
+<img width="519" height="1059" alt="image-20251207141531612" src="https://github.com/user-attachments/assets/f76a8591-c47d-4ba9-9c1e-e343cd2611f6" />
 
-![image-20251207141602021](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141602021.png)
+<img width="518" height="1146" alt="image-20251207141602021" src="https://github.com/user-attachments/assets/4170082c-99e8-486a-9461-c400bf31a5bb" />
 
-![image-20251207141649213](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141649213.png)
+<img width="515" height="1135" alt="image-20251207141649213" src="https://github.com/user-attachments/assets/6a287314-4d09-4f5f-b872-fbe9b67bc8f4" />
 
-![image-20251207141719712](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141719712.png)
 
 ### 待办事项功能
 1. 从应用菜单进入待办事项列表
@@ -123,9 +123,12 @@ NotePad1/
 3. 点击待办事项条目进行编辑
 4. 使用复选框标记待办事项完成状态
 
-![image-20251207141747030](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141747030.png)
+<img width="507" height="1132" alt="image-20251207141719712" src="https://github.com/user-attachments/assets/3d6cfc61-0844-4c80-bf6f-f4079f1a55aa" />
 
-![image-20251207141808914](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141808914.png)
+<img width="510" height="1148" alt="image-20251207141744128" src="https://github.com/user-attachments/assets/b36bf771-0b12-4412-87b6-d36ec70bc846" />
+
+<img width="515" height="1142" alt="image-20251207141808914" src="https://github.com/user-attachments/assets/4acdeffc-14a0-4700-b942-99bc8b715cd3" />
+
 
 ### 笔记本云存储、备份、恢复功能
 1. 点击导出笔记可将笔记本内容导入手机存储
@@ -136,17 +139,20 @@ NotePad1/
 
 4. Paste粘贴功能，可用更便捷的快捷粘贴框
 
-   ![image-20251207141857451](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141857451.png)
+  <img width="511" height="1145" alt="image-20251207141857451" src="https://github.com/user-attachments/assets/62dc74f3-3359-4194-a199-0dc4265615d8" />
 
-![image-20251207141911153](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207141911153.png)
+<img width="504" height="1121" alt="image-20251207141911153" src="https://github.com/user-attachments/assets/de68b98b-c389-4060-99f3-73e65e50d03c" />
+
 
 删除两条
 
-![image-20251207142116028](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207142116028.png)
+<img width="501" height="1146" alt="image-20251207142116028" src="https://github.com/user-attachments/assets/ca56a479-1400-4d13-bf8e-fdd499c62b32" />
+
 
 成功恢复 
 
-![image-20251207142415546](C:\Users\21565\AppData\Roaming\Typora\typora-user-images\image-20251207142415546.png)
+<img width="522" height="1137" alt="image-20251207142150478" src="https://github.com/user-attachments/assets/7ab445bd-55dc-4804-b219-e21239da0e2b" />
+
 
 ## 学习价值
 
